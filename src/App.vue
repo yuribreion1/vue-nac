@@ -2,9 +2,9 @@
   <div id="app" class="container">
     <Titulo classe="display-5" />
     <Descricao descricao="Nome: " />
-    <CaixaTexto v-on:entrouDados="atualizaNome" classe="form-control" tipo="text" nome="nome" ref="entradaNome" />
+    <CaixaTexto v-on:entrouDados="atualizaNome" identificador="campoNome" classe="form-control" tipo="text" nome="nome" ref="entradaNome" />
     <Descricao descricao="Telefone: " />
-    <CaixaTexto v-on:entrouDados="atualizaTelefone" classe="form-control" tipo="text" nome="telefone" ref="entradaTelefone" />
+    <CaixaTexto v-on:entrouDados="atualizaTelefone" v-on:pressionouEnter="this.atualizaContato" identificador="campoTelefone" classe="form-control" tipo="text" nome="telefone" ref="entradaTelefone" />
     <Botao classe="btn btn-primary" tipo="button" valor="Adicionar" v-on:clicou="this.atualizaContato"/>
     <ul>
       <li :key="indice" v-for="(contato, indice) in contatos">
@@ -44,6 +44,9 @@ export default {
       this.textoTelefone = telefone;
       console.log(telefone);
     }, atualizaContato: function () {
+      document.getElementById('campoNome').value="";
+      document.getElementById('campoTelefone').value="";
+
       this.contatos.push({
         nome: this.textoNome,
         telefone: this.textoTelefone

@@ -21,7 +21,7 @@ export default {
     methods: {
         mudou: function (event) {
             if(event.key=="Enter")
-                this.$emit("pressionouEnter");
+                this.$emit("pressionouEnter", this.texto);
             else
                 this.$emit("entrouDados", this.texto);
         }
