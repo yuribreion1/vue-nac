@@ -1,29 +1,6 @@
-# nac
+# NAC - Front End Intelligence 16/04/2019
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+- Para instalar o projeto, basta digitar `npm install` uma vez instalado, para executar basta entrar `npm run serve`
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
